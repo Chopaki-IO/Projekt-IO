@@ -57,6 +57,7 @@ function getBetween($content,$start,$end){
 
 
 
+
  foreach ($files_list as $fk=>$filek) {
 $array = explode("\n", file_get_contents($filek));
 
@@ -284,3 +285,5 @@ var options = {
 <link rel="stylesheet" href="style.css">
 </body>
 </html>
+
+?>
