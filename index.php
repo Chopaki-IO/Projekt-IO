@@ -17,17 +17,11 @@
 //require autoloader for classes
 require_once('classes/autoloader.php');
 
-
-
 //define vars
 $init = new Init();
 $files_list=$init->getFiles();
 $files = new FilesList($files_list);
 $backlog='';
-
-
-
-
 
 //Get filesize
 $lista=array();
@@ -39,10 +33,6 @@ foreach ($files_list as $key => $file) {
 	 
 }
 
-
-
-
-
 //Excpected strings 
 $lang_expect=array("require","require_once","include");
 
@@ -51,7 +41,6 @@ $array = explode("\n", file_get_contents($filek));
 
 foreach ($lang_expect as $expect) {
 	# code...
-
 foreach ($array as $key=>$line) {
 
 	$pos=strpos($line, $expect);
@@ -59,12 +48,7 @@ foreach ($array as $key=>$line) {
 	if($pos!==false){
 		$found=strtok(substr($line, $pos+8), "'");
 		array_push($lista[$fk], $found);
-		
-
-
-
 		}
-
  	}
  	}
  }
@@ -116,22 +100,17 @@ $.each(files[index], function(index1, value1) {
 		edys.push({
       from: files[index][0], label: '3', arrows:"to", width:3, to:   files[index][index1]
    			 });
-
 		}
-	
 	})
 })
-
 
 
 
 function countConnections(elements)
 {
 
-
 var sorted =[];
 elements.sort();
-
 var current = null;
 var count = 0;
 
@@ -142,22 +121,19 @@ for(var i = 0; i < elements.length; i++)
     if(count > 0)
     {
        
-        current["label"]='Odwołań: '+count;
+      current["label"]='Odwołań: '+count;
       sorted.push(current);
 
     }
     current = elements[i];
     count = 1;
   }
-  else
-  {
-    count++;
-  }
+  else {count++;}
 }
 
-if(count > 0)
-{
-           current["label"]='Odwołań: '+count;
+	if(count > 0)
+	{
+      current["label"]='Odwołań: '+count;
       sorted.push(current);
   }
 
@@ -179,7 +155,7 @@ Tworzenie Grafu
 
 var dataSet = new vis.DataSet(nodes);
   // create an array with edges
-  var edges = new vis.DataSet(edges);
+   var edges = new vis.DataSet(edges);
 
   // create a network
   var container = document.getElementById('mynetwork');
@@ -193,12 +169,7 @@ var options = {
     barnesHut: {
       springLength: 500
     }
-
-  },
-
-
-
-
+ },
 };
 
   
