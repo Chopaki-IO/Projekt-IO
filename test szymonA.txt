@@ -1,2 +1,6 @@
+<<<<<<< Updated upstream
 testoqiebuff
 michal sie wbija
+=======
+testy sz
+>>>>>>> Stashed changes
