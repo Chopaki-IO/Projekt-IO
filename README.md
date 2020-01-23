@@ -8,5 +8,5 @@ Autorzy<br>
 Cezary Wenta,
 Michał Wykręt ,
 Szymon Socha,
-Bartosz Weceklicki,
+Bartosz Weceklicki
 
